@@ -1,9 +1,10 @@
 const input = Deno.readTextFileSync("./input").split("\n");
 const aa = input.map((l) => {
-  return l.match(/(\d*\S*)/g);
+  return l.match(/\w*[^\s]/g);
 }).reduce((acc, v) => {
+  console.log("🚀 ~ aa ~ aa:", v);
   acc[0].push(Number(v?.at(0)));
-  acc[1].push(Number(v?.at(4)));
+  acc[1].push(Number(v?.at(1)));
   return acc;
 }, <Array<Array<number>>> [[], []])
   .map((a) => a.sort((a, b) => a - b));
