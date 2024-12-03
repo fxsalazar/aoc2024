@@ -1,5 +1,3 @@
-import { assertEquals } from "@std/assert/equals";
-
 const input = Deno.readTextFileSync("./input").split("\n");
 console.log("🚀 ~ input:", import.meta.url);
 // const input = await Deno.readTextFile(new URL("input.txt", import.meta.url));
