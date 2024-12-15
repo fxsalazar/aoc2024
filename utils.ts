@@ -5,3 +5,5 @@ export const readInput = (path: string) => {
 export const readTestInput = (path: string) => {
   return Deno.readTextFileSync(new URL("input-t", path));
 };
+
+export type Coord = { x: number; y: number };
